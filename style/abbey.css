@@ -10,12 +10,12 @@ table td, table th {
 }
 
 table tr:nth-child(even){background-color: #f2f2f2;}
-table tr:hover {background-color: #5475fb;}
+table tr:hover {background-color: yellowgreen;}
 
 table th {
     text-align: left;
     background-color: transparent;
-    color: #976cbd;
+    color: #870c03;
 }
 
 .title {
