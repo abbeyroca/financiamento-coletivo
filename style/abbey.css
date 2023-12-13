@@ -32,6 +32,7 @@ table th {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: black;
+    font-weight: bold;
     font-size: 25px;
     grid-column: 1;
 }
@@ -63,8 +64,8 @@ table th {
 }
 
 a {
-    text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 .daystable {
