@@ -1,6 +1,7 @@
-const sheetId = '1qIkY4wpea9GL9ww6WpL_OFMLSripNDET7-sJ6vvSMf4';
+
+const sheetId = '1AU5DP5U2MBoTe-uJm5tI2yRV_G2fZHTG-hUjUtxwSpk';
 const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-const sheetName = 'Teste (respostas)';
+const sheetName = 'Esquadrão da Roça Vol. 2 (respostas)';
 const query = encodeURIComponent('Select *')
 const url = `${base}&sheet=${sheetName}&tq=${query}`
 
