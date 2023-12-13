@@ -2,7 +2,6 @@
     object-fit: cover;
     float: left;
     height: 100%;
-    /* width: 100%; */
 }
 
 .home {
@@ -12,17 +11,12 @@
     text-align: center;
 }
 
-.bg {
-    object-fit: fill;
-}
-
-
 .title {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
     color: black;
-    font-size: 6vw;
+    font-size: 7vh;
     grid-column: 1 / span 8;
 
 }
@@ -65,7 +59,7 @@ table th {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: black;
-    font-size: 10vh;
+    font-size: 8vh;
     grid-column: 1 / span 8;
 }
 
