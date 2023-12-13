@@ -5,8 +5,8 @@ table {
 }
   
 table td, table th {
-    border: 1px;
-    padding: 1px;
+    border: 0px;
+    padding: 0px;
 }
 
 table tr:nth-child(even){background-color: #f2f2f2;}
@@ -78,4 +78,20 @@ a {
     text-align: center;
     color: white;
     font-size: 40px;
+}
+
+body {
+    border: 0px;
+    padding: 0px;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: lightgray;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: yellowgreen;
 }
