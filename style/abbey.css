@@ -15,7 +15,7 @@ table tr:hover {background-color: yellowgreen;}
 table th {
     text-align: left;
     background-color: transparent;
-    color: #870c03;
+    color: black;
 }
 
 .title {
@@ -64,7 +64,7 @@ table th {
 }
 
 a {
-    color: black;
+    color: red;
     font-weight: bold;
 }
 
