@@ -1,22 +1,21 @@
-table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+.homebg {
+    object-fit: cover;
+    float: left;
+    height: 100%;
+    /* width: 100%; */
+}
+
+.home {
+    position: fixed;
+    display: grid;
     width: 100%;
-}
-  
-table td, table th {
-    border: 0px;
-    padding: 0px;
+    text-align: center;
 }
 
-table tr:nth-child(even){background-color: #f2f2f2;}
-table tr:hover {background-color: yellowgreen;}
-
-table th {
-    text-align: left;
-    background-color: transparent;
-    color: black;
+.bg {
+    object-fit: fill;
 }
+
 
 .title {
     font-family: Arial, Helvetica, sans-serif;
@@ -37,6 +36,30 @@ table th {
     grid-column: 1 / span 8;
 }
 
+a {
+    color: red;
+    font-weight: bold;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+table td, table th {
+    border: 0px;
+    padding: 0px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+table tr:hover {background-color: yellowgreen;}
+
+table th {
+    text-align: left;
+    background-color: transparent;
+    color: black;
+}
 
 .homebutton {
     font-family: Arial, Helvetica, sans-serif;
@@ -44,28 +67,6 @@ table th {
     color: black;
     font-size: 55px;
     grid-column: 1 / span 8;
-}
-
-.homebg {
-    object-fit: cover;
-    float: left;
-    height: 100vh;
-}
-
-.home {
-    position: fixed;
-    display: grid;
-    width: 100%;
-    text-align: center;
-}
-
-.results {
-    display: grid;
-}
-
-a {
-    color: red;
-    font-weight: bold;
 }
 
 .band {
@@ -116,7 +117,7 @@ a {
 .littleday {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: 20px;   
+    font-size: 2vh;   
 }
 
 .littleday1 {
