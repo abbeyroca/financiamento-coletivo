@@ -49,15 +49,14 @@ table th {
 .homebg {
     object-fit: cover;
     float: left;
+    height: 100vh;
 }
 
 .home {
     position: fixed;
     display: grid;
-    height: 100%;
     width: 100%;
     text-align: center;
-    padding: 20px;
 }
 
 .results {
