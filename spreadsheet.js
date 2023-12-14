@@ -24,7 +24,8 @@ function init() {
                     let column = heading.label;
                     if (column === "Nome completo") {
                       console.log(column)
-                      colz.push("valeu galera!");
+                      column = "valeu galera!"
+                      colz.push(column);
                       const th = document.createElement('th');
                       th.innerText = column;
                       tr.appendChild(th);
@@ -36,7 +37,7 @@ function init() {
             jsonData.table.rows.forEach((rowData) => {
                 const row = {};
                 colz.forEach((ele, ind) => {
-                  console.log(ele, ind)
+                  console.log('ele', ele, 'ind',  ind)
                     row[ele] = (rowData.c[ind] != null) ? rowData.c[ind].v : '';
                 })
                 data.push(row);
