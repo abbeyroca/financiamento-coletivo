@@ -29,8 +29,7 @@ body{
 .title {
     font-family: basteleurBold;
     text-align: center;
-    color: black;
-    opacity: 75%;
+    color: red;
     font-size: 4vh;
     grid-column: 1 / span 8;
 
