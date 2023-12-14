@@ -61,7 +61,7 @@ table {
     font-family: basteleurBold;
     border-collapse: collapse;
     width: 100%;
-    grid-column: 4 / span 2;
+    grid-column: 1 / span 8;
 }
   
 table td, table th {
