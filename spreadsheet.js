@@ -2,7 +2,7 @@
 const sheetId = '1qIkY4wpea9GL9ww6WpL_OFMLSripNDET7-sJ6vvSMf4';
 const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
 const sheetName = 'Teste (respostas)';
-const query = encodeURIComponent("Select 'Identifique-se!'")
+const query = encodeURIComponent("Select *")
 // const sheetName = encodeURIComponent('Esquadrão da Roça Vol. 2 (respostas)');
 // const query = encodeURIComponent("Select *")
 const url = `${base}&sheet=${sheetName}&tq=${query}`
@@ -16,13 +16,13 @@ function init() {
         .then(rep => {
             //Remove additional text and extract only JSON:
             const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
-            console.log(jsonData)
             const colz = [];
             const tr = document.createElement('tr');
             //Extract column labels
             jsonData.table.cols.forEach((heading) => {
                 if (heading.label) {
                     let column = heading.label;
+                    console.log(column)
                     colz.push(column);
                     const th = document.createElement('th');
                     th.innerText = column;
