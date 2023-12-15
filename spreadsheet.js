@@ -14,26 +14,26 @@ function init() {
     fetch(url)
         .then(res => res.text())
         .then(rep => {
-            //Remove additional text and extract only JSON:
+            //Apaga textos adicionais e extrai so o JSON:
             const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
             const colz = [];
             const tr = document.createElement('tr');
-            //Extract column labels
+            //Extrai nome das colunas
             jsonData.table.cols.forEach((heading) => {
                 if (heading.label) {
-                    let column = heading.label;
-                    if (column === "Nome completo") {
-                      console.log(column)
-                      column = "valeu galera!"
-                      colz.push(column);
-                      const th = document.createElement('th');
-                      th.innerText = column;
-                      tr.appendChild(th);
-                    }
+                  colz.push(column);
+                  let column = heading.label;
+                  if (column === "Nome completo") {
+                    console.log(column)
+                    column = "valeu galera!"
+                    const th = document.createElement('th');
+                    th.innerText = column;
+                    tr.appendChild(th);
+                  }
                 }
             })
             output.appendChild(tr);
-            //extract row data:
+            //Extrai dados das linhas
             jsonData.table.rows.forEach((rowData) => {
                 const row = {};
                 colz.forEach((ele, ind) => {
