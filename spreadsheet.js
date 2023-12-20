@@ -1,10 +1,7 @@
-// const sheetId = '1AU5DP5U2MBoTe-uJm5tI2yRV_G2fZHTG-hUjUtxwSpk';
-const sheetId = '1qIkY4wpea9GL9ww6WpL_OFMLSripNDET7-sJ6vvSMf4';
+const sheetId = '1AU5DP5U2MBoTe-uJm5tI2yRV_G2fZHTG-hUjUtxwSpk';
 const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-const sheetName = 'Teste (respostas)';
-const query = encodeURIComponent("Select *")
-// const sheetName = 'Esquadrão da Roça Vol. 2 (respostas)';
-// const query = encodeURIComponent("Select *")
+const sheetName = 'Esquadrão da Roça Vol. 2 (respostas)';
+const query = encodeURIComponent("Select B")
 const url = `${base}&sheet=${sheetName}&tq=${query}`
 
 const data = []
@@ -23,13 +20,10 @@ function init() {
                 if (heading.label) {
                   colz.push(column);
                   let column = heading.label;
-                  if (column === "Nome completo") {
-                    console.log(column)
                     column = "valeu galera!"
                     const th = document.createElement('th');
                     th.innerText = column;
                     tr.appendChild(th);
-                  }
                 }
             })
             output.appendChild(tr);
@@ -37,7 +31,6 @@ function init() {
             jsonData.table.rows.forEach((rowData) => {
                 const row = {};
                 colz.forEach((ele, ind) => {
-                  console.log('ele', ele, 'ind',  ind)
                     row[ele] = (rowData.c[ind] != null) ? rowData.c[ind].v : '';
                 })
                 data.push(row);

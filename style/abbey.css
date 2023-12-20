@@ -19,6 +19,7 @@ body{
     text-align: center;
     grid-row: 10;
     padding: 0px;
+    align-content: space-around;
 }
 
 @font-face {
@@ -30,7 +31,7 @@ body{
     font-family: basteleurBold;
     text-align: center;
     color: red;
-    font-size: 4vh;
+    font-size: 6vh;
     grid-column: 1 / span 8;
 
 }
@@ -44,6 +45,16 @@ body{
     grid-column: 1 / span 8;
 }
 
+.text {
+    font-family: basteleurBold;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+    grid-column: 4 / span 2;
+    width: 67vw;
+}
+
 a {
     color: red;
     font-weight: bold;
@@ -55,6 +66,7 @@ a {
     text-align: center;
     color: black;
     grid-column: 1 / span 8;
+    margin: 1vw;
 }
 
 table {
