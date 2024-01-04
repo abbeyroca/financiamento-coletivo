@@ -45,7 +45,6 @@ function processRows(json) {
         const keys = Object.keys(row);
 
         keys.forEach((key) => {
-          console.log("Key " + key + " Row " + row[key])
           if (key.includes("Brinde 1")) {
             total = total + row[key] * 20.0
           }
@@ -67,6 +66,7 @@ function processRows(json) {
           if (key.includes("DIREITO DE FESTA")) {
             total += 500
           }
+          console.log(total)
         })
       })
       var myBar = document.getElementById("myBar");
