@@ -73,6 +73,7 @@ function processRows(json) {
       var textGoal = document.getElementById("textGoal")
       if (total < 5000) {
         console.log("Ainda nao alcancou a meta " + total)
+        console.log("My bar width " + 100 * total / 5000 + "vw")
         myBar.style.width = 100 * total / 5000 + "vw";
         missingAmount = 5000-total
         textGoal.innerHTML = "Faltam " + missingAmount + " reais para alcançar a meta!"
