@@ -8,6 +8,7 @@ const data = []
 document.addEventListener('DOMContentLoaded', init)
 const output = document.querySelector('.output')
 function init() {
+  console.log("INIT")
   fetch(url)
   .then(res => res.text())
   .then(rep => {
@@ -19,7 +20,6 @@ function init() {
             jsonData.table.cols.forEach((heading) => {
               let column = heading.label;
                 colz.push(column);
-                  // column = "valeu galera!"
                   const th = document.createElement('th');
                   // th.innerText = column;
                   tr.appendChild(th);
@@ -37,9 +37,6 @@ function init() {
               processRows(data);
             })
 }
-
-// Precos por coluna
-const prices = [0, 20, 50, 80, 300, 200, 400, 500]
 
 function processRows(json) {
   var total = 0.0
@@ -70,26 +67,18 @@ function processRows(json) {
           if (key.includes("DIREITO DE FESTA")) {
             total += 500
           }
-          // const td = document.createElement('td');
-          // td.textContent = row[key];
-          // tr.appendChild(td);
         })
-        // output.appendChild(tr);
       })
       var myBar = document.getElementById("myBar");
-      var progressBar = document.getElementById("myProgress");
-      console.log("progress bar width " + progressBar.style.width)
-      console.log("my bar width " + myBar.style.width)
-
       var textGoal = document.getElementById("textGoal")
       if (total < 5000) {
         console.log("Ainda nao alcancou a meta " + total)
-        myBar.style.width = progressBar.style.width * total / 5000;
+        myBar.style.width = 100 * total / 5000 + "vw";
         missingAmount = 5000-total
         textGoal.innerHTML = "Faltam " + missingAmount + " reais para alcançar a meta!"
         console.log("Faltam " + missingAmount + " reais para alcançar a meta!")
       } else {
-        myBar.style.width = progressBar.style.width
+        myBar.style.width = "100vw";
         textGoal.innerHTML = "Meta alcançada! VALEU GALERA!"
       }
       myBar.innerHTML = 100*total/5000 + "%"

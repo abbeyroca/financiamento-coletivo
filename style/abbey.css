@@ -80,7 +80,7 @@ grid-container {
     color: white;
     font-weight: bold;
     grid-column: 1 / span 8;
-    width: 97vw;
+    width: 100vw;
 }
 
 a {
