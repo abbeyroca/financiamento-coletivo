@@ -45,28 +45,28 @@ function processRows(json) {
         const keys = Object.keys(row);
 
         keys.forEach((key) => {
-          if (key.includes("Brinde 1")) {
+          if (key.includes("Brinde 1") && row[key] != "") {
             total = total + row[key] * 20.0
           }
-          if (key.includes("Brinde 2")) {
+          if (key.includes("Brinde 2") && row[key] != "") {
             total = total + row[key] * 50.0
           }
-          if (key.includes("Brinde 3")) {
+          if (key.includes("Brinde 3") && row[key] != "") {
             total += 80.0
           }
-          if (key.includes("CLIENTE VIP")) {
+          if (key.includes("CLIENTE VIP") && row[key] != "") {
             total += 300.0
           }
-          if (key.includes("PATROCINADOR PRATA")) {
+          if (key.includes("PATROCINADOR PRATA") && row[key] != "") {
             total += 200.0
           }
-          if (key.includes("PATROCINADOR OURO")) {
+          if (key.includes("PATROCINADOR OURO") && row[key] != "") {
             total += 400
           }
-          if (key.includes("DIREITO DE FESTA")) {
+          if (key.includes("DIREITO DE FESTA") && row[key] != "") {
             total += 500
           }
-          console.log(total)
+          console.log(total + " " + row[key])
         })
       })
       var myBar = document.getElementById("myBar");
