@@ -1,11 +1,25 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
+    .title {
+        height: 17vh;
+        font-size: 6vh;
+    }
     .text {
         font-size: 1.6vh;
     }
+    .caption {
+        color: white;
+    }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 851px) {
+    .title {
+        font-size: 10vh;
+        height: 20vh;
+    }
     .text {
         font-size: 3vh;
+    }
+    .caption {
+        color: black;
     }
 }
 
@@ -34,6 +48,11 @@ body{
     align-content: space-around;
 }
 
+grid-container {
+    margin: 0px;
+    gap: 0px;
+}
+
 @font-face {
     font-family: basteleurBold;
     src: url(Basteleur-Bold.woff);
@@ -41,19 +60,14 @@ body{
 
 .title {
     font-family: basteleurBold;
-    text-align: center;
     color: red;
-    font-size: 6vh;
-    height: 20vh;
     margin: 0px;
     grid-column: 1 / span 8;
-
 }
 
 .caption {
     font-family: basteleurBold;
     text-align: center;
-    color: white;
     font-weight: bold;
     font-size: 2vh;
     margin: 0px;
