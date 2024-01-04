@@ -8,6 +8,7 @@
     }
     .caption {
         color: white;
+        background-color: rgba(10, 10, 10, 0.5);
     }
     .littleday {
         font-size: 1.5vh;   
@@ -86,7 +87,8 @@ grid-container {
     color: white;
     font-weight: bold;
     grid-column: 1 / span 8;
-    width: 100vw;
+    width: 98vw;
+    background-color: rgba(10, 10, 10, 0.5);
 }
 
 a {
@@ -192,6 +194,7 @@ table th {
 
 .goal {
     grid-column: 3 / span 4;
+    background-color: rgba(10, 10, 10, 0.5);
 }
 
 .forms-table {
