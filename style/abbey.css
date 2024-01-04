@@ -156,9 +156,9 @@ table th {
 }
 
 #myProgress {
-    width: 100%;
+    width: 100vw;
     background-color: lightgray;
-    grid-column: 3 / span 4;
+    grid-column: 1 / span 8;
 }
 
 #myBar {

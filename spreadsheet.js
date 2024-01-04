@@ -71,7 +71,7 @@ function processRows(json) {
       })
       var myBar = document.getElementById("myBar");
       var textGoal = document.getElementById("textGoal")
-      if (total < 5000) {
+      if (total <= 5000) {
         console.log("Ainda nao alcancou a meta " + total)
         console.log("My bar width " + 100 * total / 5000 + "vw")
         myBar.style.width = 100 * total / 5000 + "vw";
@@ -83,6 +83,6 @@ function processRows(json) {
         textGoal.innerHTML = "Meta alcançada! VALEU GALERA!"
       }
       myBar.innerHTML = 100*total/5000 + "%"
-      console.log("myBar " + 100*total/5000 + "%")
+      console.log("myBar " + 100*total/5000 + "vw")
     }
     
