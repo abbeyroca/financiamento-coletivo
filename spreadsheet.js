@@ -66,6 +66,7 @@ function processRows(json) {
           if (key.includes("DIREITO DE FESTA") && row[key] != "") {
             total += 500
           }
+          console.log(total + " " + row[key] + " " + key)
         })
       })
       var myBar = document.getElementById("myBar");
