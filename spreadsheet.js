@@ -1,6 +1,6 @@
 const sheetId = '1RvSs9mEKyiIBi9JuAZlS5LJWjI9f2ThTe7ozMlFNUBk';
 const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-const sheetName = 'Esquadrão da Roça Vol. 2 (respostas)';
+const sheetName = 'Financiamento - Legaliza o Abbey! (respostas)';
 const query = encodeURIComponent("Select B, E, F, G, H, I, J, K")
 const url = `${base}&sheet=${sheetName}&tq=${query}`
 
