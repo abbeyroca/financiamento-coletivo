@@ -6,10 +6,6 @@
     .text {
         font-size: 1.7vh;
     }
-    .caption {
-        color: white;
-        background-color: rgba(10, 10, 10, 0.5);
-    }
     .littleday {
         font-size: 1.5vh;   
     }
@@ -20,10 +16,7 @@
         height: 20vh;
     }
     .text {
-        font-size: 3vh;
-    }
-    .caption {
-        color: black;
+        font-size: 2.8vh;
     }
     .littleday {
         font-size: 3vh;
@@ -32,6 +25,7 @@
 
 body{
     margin: 0px;
+    padding: 0;
 }
 
 .wrapper {
@@ -74,6 +68,7 @@ grid-container {
 
 .caption {
     font-family: basteleurBold;
+    color: white;
     text-align: center;
     font-weight: bold;
     font-size: 2vh;
@@ -88,7 +83,6 @@ grid-container {
     font-weight: bold;
     grid-column: 1 / span 8;
     width: 98vw;
-    background-color: rgba(10, 10, 10, 0.5);
 }
 
 a {
@@ -194,9 +188,16 @@ table th {
 
 .goal {
     grid-column: 3 / span 4;
-    background-color: rgba(10, 10, 10, 0.5);
 }
 
 .forms-table {
     grid-column: 1 / span 8;
+}
+
+.bg {
+    filter: opacity(30%);
+}
+
+.wrapper {
+    background-color: black;
 }
