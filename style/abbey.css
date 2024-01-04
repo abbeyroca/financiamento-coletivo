@@ -79,7 +79,7 @@ grid-container {
     text-align: center;
     color: white;
     font-weight: bold;
-    grid-column: 4 / span 2;
+    grid-column: 1 / span 8;
     width: 97vw;
 }
 
@@ -188,4 +188,8 @@ table th {
 
 .goal {
     grid-column: 3 / span 4;
+}
+
+.forms-table {
+    grid-column: 1 / span 8;
 }

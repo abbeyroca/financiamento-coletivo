@@ -10,6 +10,7 @@ const data = []
 document.addEventListener('DOMContentLoaded', init)
 const output = document.querySelector('.output')
 function init() {
+  console.log("INIT!!!")
     fetch(url)
         .then(res => res.text())
         .then(rep => {
@@ -17,19 +18,17 @@ function init() {
             const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
             const colz = [];
             const tr = document.createElement('tr');
-            console.log("OVER HEEEEEEEEEEEEEEEEEEEEEEEEERE" + jsonData)
             //Extrai nome das colunas
             jsonData.table.cols.forEach((heading) => {
-                if (heading.label) {
-                  let column = heading.label;
-                  colz.push(column);
-                    // column = "valeu galera!"
-                    const th = document.createElement('th');
-                    // th.innerText = column;
-                    tr.appendChild(th);
-                }
+                let column = heading.label;
+                colz.push(column);
+                  // column = "valeu galera!"
+                  const th = document.createElement('th');
+                  // th.innerText = column;
+                  tr.appendChild(th);
+        
             })
-            output.appendChild(tr);
+            // output.appendChild(tr);
             //Extrai dados das linhas
             jsonData.table.rows.forEach((rowData) => {
                 const row = {};
@@ -43,17 +42,19 @@ function init() {
 }
 
 function processRows(json) {
+  var total = 0.0
+  var progressBar = document.getElementById("myBar");
     json.forEach((row) => {
         const tr = document.createElement('tr');
         const keys = Object.keys(row);
 
         keys.forEach((key) => {
             const td = document.createElement('td');
-            console.log("OVER HEEEEEEEEEEEEEEEEEEEEEEEEERE" + key + row[key])
+            console.log("Key " + key + "Row " + row[key])
             td.textContent = row[key];
             tr.appendChild(td);
         })
-        output.appendChild(tr);
+        // output.appendChild(tr);
     })
 }
 
