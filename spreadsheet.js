@@ -8,7 +8,6 @@ const data = []
 document.addEventListener('DOMContentLoaded', init)
 const output = document.querySelector('.output')
 function init() {
-  console.log("INIT!!!")
   fetch(url)
   .then(res => res.text())
   .then(rep => {
@@ -79,35 +78,19 @@ function processRows(json) {
       })
       var myBar = document.getElementById("myBar");
       var progressBar = document.getElementById("myProgress");
-      console.log("progress bar width " + progressBar.style.width)
+      console.log("progress bar width " + progressBar.width)
+
       var textGoal = document.getElementById("textGoal")
       if (total < 5000) {
         console.log("Ainda nao alcancou a meta " + total)
-        myBar.style.width = progressBar.style.width * total / 5000;
+        myBar.width = progressBar.width * total / 5000;
         missingAmount = 5000-total
         textGoal.text = "Faltam " + missingAmount + " reais para alcançar a meta!"
+        console.log("Faltam " + missingAmount + " reais para alcançar a meta!")
       } else {
-        myBar.style.width = progressBar.style.width
+        myBar.width = progressBar.width
         textGoal.text = "Meta alcançada! VALEU GALERA!"
       }
       myBar.text = 100*total/5000 + "%"
     }
     
-    var i = 0;
-    function move() {
-      if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
-    }
-  }
-} 
