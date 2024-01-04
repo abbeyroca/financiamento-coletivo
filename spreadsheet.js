@@ -78,17 +78,18 @@ function processRows(json) {
       })
       var myBar = document.getElementById("myBar");
       var progressBar = document.getElementById("myProgress");
-      console.log("progress bar width " + progressBar.width)
+      console.log("progress bar width " + progressBar.style.width)
+      console.log("my bar width " + myBar.style.width)
 
       var textGoal = document.getElementById("textGoal")
       if (total < 5000) {
         console.log("Ainda nao alcancou a meta " + total)
-        myBar.width = progressBar.width * total / 5000;
+        myBar.style.width = progressBar.style.width * total / 5000;
         missingAmount = 5000-total
         textGoal.innerHTML = "Faltam " + missingAmount + " reais para alcançar a meta!"
         console.log("Faltam " + missingAmount + " reais para alcançar a meta!")
       } else {
-        myBar.width = progressBar.width
+        myBar.style.width = progressBar.style.width
         textGoal.innerHTML = "Meta alcançada! VALEU GALERA!"
       }
       myBar.innerHTML = 100*total/5000 + "%"
