@@ -85,12 +85,13 @@ function processRows(json) {
         console.log("Ainda nao alcancou a meta " + total)
         myBar.width = progressBar.width * total / 5000;
         missingAmount = 5000-total
-        textGoal.text = "Faltam " + missingAmount + " reais para alcançar a meta!"
+        textGoal.innerHTML = "Faltam " + missingAmount + " reais para alcançar a meta!"
         console.log("Faltam " + missingAmount + " reais para alcançar a meta!")
       } else {
         myBar.width = progressBar.width
-        textGoal.text = "Meta alcançada! VALEU GALERA!"
+        textGoal.innerHTML = "Meta alcançada! VALEU GALERA!"
       }
-      myBar.text = 100*total/5000 + "%"
+      myBar.innerHTML = 100*total/5000 + "%"
+      console.log("myBar " + 100*total/5000 + "%")
     }
     
