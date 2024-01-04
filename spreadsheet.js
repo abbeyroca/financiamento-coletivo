@@ -3,6 +3,8 @@ const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
 const sheetName = 'Financiamento - Legaliza o Abbey! (respostas)';
 const query = encodeURIComponent("Select B, E, F, G, H, I, J, K")
 const url = `${base}&sheet=${sheetName}&tq=${query}`
+// Precos por coluna
+const prices = [0, 20, 50, 80, 300, 200, 400, 500]
 
 const data = []
 document.addEventListener('DOMContentLoaded', init)
@@ -15,14 +17,15 @@ function init() {
             const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
             const colz = [];
             const tr = document.createElement('tr');
+            console.log(jsonData)
             //Extrai nome das colunas
             jsonData.table.cols.forEach((heading) => {
                 if (heading.label) {
-                  colz.push(column);
                   let column = heading.label;
-                    column = "valeu galera!"
+                  colz.push(column);
+                    // column = "valeu galera!"
                     const th = document.createElement('th');
-                    th.innerText = column;
+                    // th.innerText = column;
                     tr.appendChild(th);
                 }
             })
@@ -46,6 +49,7 @@ function processRows(json) {
 
         keys.forEach((key) => {
             const td = document.createElement('td');
+            console.log(key, row[key])
             td.textContent = row[key];
             tr.appendChild(td);
         })

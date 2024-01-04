@@ -1,10 +1,10 @@
 @media only screen and (max-width: 850px) {
     .title {
-        height: 17vh;
-        font-size: 6vh;
+        height: 6vh;
+        font-size: 3.5vh;
     }
     .text {
-        font-size: 1.6vh;
+        font-size: 1.7vh;
     }
     .caption {
         color: white;
