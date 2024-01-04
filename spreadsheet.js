@@ -17,7 +17,7 @@ function init() {
             const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
             const colz = [];
             const tr = document.createElement('tr');
-            console.log(jsonData)
+            console.log("OVER HEEEEEEEEEEEEEEEEEEEEEEEEERE" + jsonData)
             //Extrai nome das colunas
             jsonData.table.cols.forEach((heading) => {
                 if (heading.label) {
@@ -49,7 +49,7 @@ function processRows(json) {
 
         keys.forEach((key) => {
             const td = document.createElement('td');
-            console.log(key, row[key])
+            console.log("OVER HEEEEEEEEEEEEEEEEEEEEEEEEERE" + key + row[key])
             td.textContent = row[key];
             tr.appendChild(td);
         })
