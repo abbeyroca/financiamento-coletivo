@@ -77,10 +77,9 @@ grid-container {
 }
 
 .text {
-    font-family: basteleurBold;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: white;
-    font-weight: bold;
     grid-column: 1 / span 8;
     width: 98vw;
 }
