@@ -193,11 +193,3 @@ table th {
 .forms-table {
     grid-column: 1 / span 8;
 }
-
-.bg {
-    filter: opacity(30%);
-}
-
-.wrapper {
-    background-color: black;
-}
