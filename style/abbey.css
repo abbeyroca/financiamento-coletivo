@@ -84,9 +84,9 @@ grid-container {
     width: 94vw;
     padding-left: 3vw;
     padding-right: 3vw;
-    padding-top: 0px;
-    padding-bottom: 3vw;
+    padding-bottom: 10vw;
 }
+
 
 a {
     color: red;
@@ -99,7 +99,12 @@ a {
     text-align: center;
     color: black;
     grid-column: 1 / span 8;
-    margin: 1vw;
+}
+
+.contribution {
+    font-family: basteleurBold;
+    color: red;
+    grid-column: 1 / span 8;
 }
 
 table {
@@ -152,6 +157,11 @@ table th {
 
 .day4 {
     grid-column: 7 / span 2;
+}
+
+.progressbar {
+    text-align: center;
+    margin-top: 3vh;
 }
 
 #myProgress {
