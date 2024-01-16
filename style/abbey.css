@@ -82,7 +82,10 @@ grid-container {
     color: white;
     grid-column: 1 / span 8;
     width: 94vw;
-    padding: 3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0px;
+    padding-bottom: 3vw;
 }
 
 a {
