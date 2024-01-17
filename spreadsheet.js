@@ -50,7 +50,7 @@ function processRows(json) {
             console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("Brinde 2") && row[key] != "" && row[key] != null) {
-            total = total + row[key] * 50.0
+            total = total + row[key] * 40.0
             console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("Brinde 3") && row[key] != "" && row[key] != null) {
