@@ -23,7 +23,7 @@ function init() {
                   const th = document.createElement('th');
                   // th.innerText = column;
                   tr.appendChild(th);
-                  
+
                 })
             // output.appendChild(tr);
             //Extrai dados das linhas
@@ -47,26 +47,32 @@ function processRows(json) {
         keys.forEach((key) => {
           if (key.includes("Brinde 1") && row[key] != "") {
             total = total + row[key] * 20.0
+            console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("Brinde 2") && row[key] != "") {
             total = total + row[key] * 50.0
+            console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("Brinde 3") && row[key] != "") {
             total += 80.0
+            console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("CLIENTE VIP") && row[key] != "") {
             total += 300.0
+            console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("PATROCINADOR PRATA") && row[key] != "") {
             total += 200.0
+            console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("PATROCINADOR OURO") && row[key] != "") {
             total += 400
+            console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("DIREITO DE FESTA") && row[key] != "") {
             total += 500
+            console.log(total + " " + row[key] + " " + key)
           }
-          console.log(total + " " + row[key] + " " + key)
         })
       })
       var myBar = document.getElementById("myBar");
@@ -85,4 +91,3 @@ function processRows(json) {
       myBar.innerHTML = 100*total/5000 + "%"
       console.log("myBar " + 100*total/5000 + "vw")
     }
-    
