@@ -46,7 +46,7 @@ function processRows(json) {
 
         keys.forEach((key) => {
           if (key.includes("Brinde 1") && row[key] != "" && row[key] != null) {
-            total = total + row[key] * 20.0
+            total = total + row[key] * 15.0
             console.log(total + " " + row[key] + " " + key)
           }
           if (key.includes("Brinde 2") && row[key] != "" && row[key] != null) {
