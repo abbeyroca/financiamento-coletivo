@@ -45,31 +45,31 @@ function processRows(json) {
         const keys = Object.keys(row);
 
         keys.forEach((key) => {
-          if (key.includes("Brinde 1") && row[key] != "") {
+          if (key.includes("Brinde 1") && row[key] != "" && row[key] != null) {
             total = total + row[key] * 20.0
             console.log(total + " " + row[key] + " " + key)
           }
-          if (key.includes("Brinde 2") && row[key] != "") {
+          if (key.includes("Brinde 2") && row[key] != "" && row[key] != null) {
             total = total + row[key] * 50.0
             console.log(total + " " + row[key] + " " + key)
           }
-          if (key.includes("Brinde 3") && row[key] != "") {
+          if (key.includes("Brinde 3") && row[key] != "" && row[key] != null) {
             total += 80.0
             console.log(total + " " + row[key] + " " + key)
           }
-          if (key.includes("CLIENTE VIP") && row[key] != "") {
+          if (key.includes("CLIENTE VIP") && row[key] != "" && row[key] != null) {
             total += 300.0
             console.log(total + " " + row[key] + " " + key)
           }
-          if (key.includes("PATROCINADOR PRATA") && row[key] != "") {
+          if (key.includes("PATROCINADOR PRATA") && row[key] != "" && row[key] != null) {
             total += 200.0
             console.log(total + " " + row[key] + " " + key)
           }
-          if (key.includes("PATROCINADOR OURO") && row[key] != "") {
+          if (key.includes("PATROCINADOR OURO") && row[key] != "" && row[key] != null) {
             total += 400
             console.log(total + " " + row[key] + " " + key)
           }
-          if (key.includes("DIREITO DE FESTA") && row[key] != "") {
+          if (key.includes("DIREITO DE FESTA") && row[key] != "" && row[key] != null) {
             total += 500
             console.log(total + " " + row[key] + " " + key)
           }
