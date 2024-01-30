@@ -78,14 +78,13 @@ function processRows(json) {
       var myBar = document.getElementById("myBar");
       var textGoal = document.getElementById("textGoal")
       // Doacao - X
-      total += 111.73 
+      total += 111.73
       console.log(total + " Doacao X 111,73")
       // Doacao - Ana Luisa Fernandes Campolina
-      total += 50 
+      total += 50
       console.log(total + " Ana Luisa Fernandes Campolina Doacao  50,00")
       // Doacao - Jose Augusto Gaspar Ruas
       total += 80
-      total = total.toFixed(2) 
       console.log(total + " Jose Augusto Gaspar Ruas Doacao  80,00")
       if (total <= 5000) {
         console.log("Ainda nao alcancou a meta " + total)
@@ -98,6 +97,6 @@ function processRows(json) {
         myBar.style.width = "100vw";
         textGoal.innerHTML = "Meta alcançada! VALEU GALERA!"
       }
-      myBar.innerHTML = 100*total/5000 + "%"
+      myBar.innerHTML = Math.round(100*total/5000) + "%"
       console.log("myBar " + 100*total/5000 + "vw")
     }
