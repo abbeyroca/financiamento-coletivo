@@ -79,10 +79,13 @@ function processRows(json) {
       var textGoal = document.getElementById("textGoal")
       // Doacao - X
       total += 111.73 
+      console.log(total + " Doacao X 111,73")
       // Doacao - Ana Luisa Fernandes Campolina
       total += 50 
+      console.log(total + " Ana Luisa Fernandes Campolina Doacao  50,00")
       // Doacao - Jose Augusto Gaspar Ruas
       total += 80 
+      console.log(total + " Jose Augusto Gaspar Ruas Doacao  80,00")
       if (total <= 5000) {
         console.log("Ainda nao alcancou a meta " + total)
         console.log("My bar width " + 100 * total / 5000 + "vw")
