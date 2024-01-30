@@ -98,5 +98,5 @@ function processRows(json) {
         textGoal.innerHTML = "Meta alcançada! VALEU GALERA!"
       }
       myBar.innerHTML = Math.round(100*total/5000) + "%"
-      console.log("myBar " + 100*total/5000 + "vw")
+      console.log("myBar " + Math.round(100*total/5000) + "vw")
     }
