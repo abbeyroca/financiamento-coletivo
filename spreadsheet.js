@@ -71,6 +71,12 @@ function processRows(json) {
       })
       var myBar = document.getElementById("myBar");
       var textGoal = document.getElementById("textGoal")
+      // Doacao - X
+      total += 111.73 
+      // Doacao - Ana Luisa Fernandes Campolina
+      total += 50 
+      // Doacao - Jose Augusto Gaspar Ruas
+      total += 80 
       if (total <= 5000) {
         console.log("Ainda nao alcancou a meta " + total)
         console.log("My bar width " + 100 * total / 5000 + "vw")
