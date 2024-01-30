@@ -84,7 +84,8 @@ function processRows(json) {
       total += 50 
       console.log(total + " Ana Luisa Fernandes Campolina Doacao  50,00")
       // Doacao - Jose Augusto Gaspar Ruas
-      total += 80 
+      total += 80
+      total = total.toFixed(2) 
       console.log(total + " Jose Augusto Gaspar Ruas Doacao  80,00")
       if (total <= 5000) {
         console.log("Ainda nao alcancou a meta " + total)
